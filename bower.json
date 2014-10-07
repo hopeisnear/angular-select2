@@ -1,15 +1,29 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "angular": "1.2.x",
-    "angular-route": "1.2.x",
-    "angular-loader": "1.2.x",
-    "angular-mocks": "~1.2.x",
-    "html5-boilerplate": "~4.3.0"
-  }
+    "name": "angular-select2",
+    "version": "0.1.0",
+    "homepage": "https://github.com/hopeisnear/angular-select2",
+    "authors": [
+        "hopeisnear"
+    ],
+    "description": "AngularJS select2 directive",
+    "license": "FREE",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "src",
+        "test"
+    ],
+    "dependencies": {
+        "angular": "~1.2",
+	"select2": "~3.5.1",
+        "select2-bootstrap-css": "1.2.4",
+        "bootstrap": "~3.2",
+	"google-code-prettify": "~1.0"
+    },
+    "devDependencies": {
+        "jquery": "~1.11",
+        "angular-sanitize": "~1.2",
+        "angular-mocks": "~1.2"
+    }
 }
