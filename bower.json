@@ -16,10 +16,10 @@
     ],
     "dependencies": {
         "angular": "~1.2",
-	"select2": "~3.5.1",
+	    "select2": "~3.5.1",
         "select2-bootstrap-css": "1.2.4",
         "bootstrap": "~3.2",
-	"google-code-prettify": "~1.0"
+	    "google-code-prettify": "~1.0"
     },
     "devDependencies": {
         "jquery": "~1.11",

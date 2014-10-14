@@ -7,8 +7,9 @@
 
         return {
             restrict: 'EA',
-            require: 'ngModel',
-            link: function(scope, element, attrs, ngModelCtrl) {
+            link: function(scope, element, attrs) {
+
+                var params = attrs.jqSelect2 ? scope.$eval(attrs.jqSelect2) : {allowClear: true, minimumResultsForSearch: 8};
 
                 scope.$watch(function() {
                     return $('option:selected', element).val();
@@ -16,16 +17,22 @@
                     element.select2('val', val);
                 });
 
-                if(attrs.jqSelect2) {
-                    element.select2(scope.$eval(attrs.jqSelect2));
-                } else {
-                    element.select2({
-                        allowClear: true,
-                        minimumResultsForSearch: 8
+                //select 2 needs to be manually updated for IE if ng-disabled changes
+                if(/msie/.test(navigator.userAgent.toLowerCase())) {
+                    attrs.$observe('disabled', function(val) {
+                        element.select2("enable", !val);
                     });
-                }
+                };
 
+                //dynamic placeholder support
+                attrs.$observe('placeholder', function(val) {
+                    if(val) {
+                        params.placeholder = val;
+                        element.select2(params);
+                    }
+                });
 
+                element.select2(params);
 
             }
         };
