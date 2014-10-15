@@ -28,8 +28,6 @@ describe('jq select 2 directive', function() {
 
         var options = element.find('option');
 
-        console.log(element);
-
         expect(options.length).toBe(3);
         expect(options.eq(0).text()).toBe(scope.countries[0].name);
         expect(options.eq(1).text()).toBe(scope.countries[1].name);
