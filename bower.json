@@ -1,12 +1,18 @@
 {
     "name": "angular-select2",
-    "version": "0.1.0",
+    "main": "src/jqSelect2.js",
+    "version": "1.0.0",
     "homepage": "https://github.com/hopeisnear/angular-select2",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/hopeisnear/angular-select2.git"
+    },
     "authors": [
         "hopeisnear"
     ],
     "description": "AngularJS select2 directive",
-    "license": "FREE",
+    "license": "WTFPL",
+    "keywords": ["select2", "angularjs"],
     "ignore": [
         "**/.*",
         "node_modules",
